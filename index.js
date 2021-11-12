@@ -51,6 +51,10 @@ async function run() {
 
         })
 
+        app.get('/hello', (req, res) => {
+            res.send('hello updated here');
+        })
+
         app.post('/products/byKeys', async (req, res) => {
             console.log(req.body);
             res.send('Hitting Post');
